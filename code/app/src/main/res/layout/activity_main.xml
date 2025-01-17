@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF6F6"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="186dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#A29F9F"
+        android:text="CONFIRM"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_text"
+        app:strokeColor="#E4E3E3"
+        android:onClick="click_confirm"/>
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter a city here"
+        android:inputType="text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#A29F9F"
+        android:onClick="add_city_visible"
+        android:text="ADD CITY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#E4E3E3" />
+
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#A29F9F"
+        android:text="DELETE CITY"
+        android:onClick="click_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#E4E3E3" />
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_button" >
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
